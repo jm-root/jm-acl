@@ -1,0 +1,43 @@
+{
+  "admin": {
+    "/acl/orgs": ["get","post","delete"],
+    "/acl/orgs/:id": ["get","post","delete"],
+    "/acl/orgs/tree": ["get"],
+    "/acl/orgs/:id/users": ["get"],
+    "/acl/orgs/:id/roles": ["get","post","delete"],
+    "/acl/orgs/:id/resources": ["get","post","delete"],
+    "/acl/resources/:id": ["post"],
+    "/acl/resources": ["get","delete"],
+    "/acl/user/roles": ["get"],
+    "/acl/user/permissions": ["get"],
+    "/acl/roles": ["get","post"],
+    "/acl/roles/:id": ["post"],
+    "/acl/roles/:role": ["delete"],
+    "/acl/roles/:role/users": ["get"],
+    "/acl/roles/:id/roles": ["post","delete"],
+    "/acl/roles/:role/resources": ["get","delete"],
+    "/acl/roles/:role/permissions": ["post","delete"]
+  },
+  "system": {
+    "/acl/orgs": ["get","post","delete"],
+    "/acl/orgs/:id": ["get","post","delete"],
+    "/acl/orgs/tree": ["get"],
+    "/acl/orgs/:id/users": ["get"],
+    "/acl/orgs/:id/roles": ["get","post","delete"],
+    "/acl/orgs/:id/resources": ["get","post","delete"],
+    "/acl/resources/:id": ["post"],
+    "/acl/resources": ["get","delete"],
+    "/acl/user/roles": ["get"],
+    "/acl/user/permissions": ["get"],
+    "/acl/roles": ["get","post"],
+    "/acl/roles/:id": ["post"],
+    "/acl/roles/:role": ["delete"],
+    "/acl/roles/:role/users": ["get"],
+    "/acl/roles/:id/roles": ["post","delete"],
+    "/acl/roles/:role/resources": ["get","delete"],
+    "/acl/roles/:role/permissions": ["post","delete"],
+    "/sso/users": ["get","post","delete"],
+    "/sso/users/:id": ["get","post","delete"],
+    "/sso/finduser": ["get"]
+  }
+}

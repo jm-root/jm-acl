@@ -1,0 +1,15 @@
+{
+  "InvalidCardType": "无效充值卡类型",
+  "InvalidPrepaidCardID": "无效充值卡ID",
+  "FailedToCreateRechargeCard": "创建充值卡失败",
+  "InvalidPrepaidCard": "无效充值卡",
+  "InvalidTime": "无效时间",
+  "QueryCardTypeFailed": "查询充值卡类型失败",
+  "QueryChannelFailed": "查询渠道失败",
+  "QueryPrepaidCardFailed": "查询充值卡失败",
+  "NoviceCardCanOnlyBeUsedOnce": "新手卡只能用一次",
+  "UsersAreChannelsAndPrepaidCardchannelsDoNotMatch": "用户所属渠道与充值卡渠道不匹配",
+  "AllocationOfItemsFailed": "分配道具失败",
+  "UpdatePrepaidCardStatusFailed": "更新充值卡状态失败",
+  "RechargeSuccess": "充值成功"
+}

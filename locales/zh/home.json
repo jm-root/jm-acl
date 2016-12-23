@@ -1,0 +1,20 @@
+{
+  "DefaultChannelCannotBeOperated":"默认渠道无法操作",
+  "DefaultChannelFailed":"订阅默认渠道失败",
+  "BindingSuccess":"绑定成功",
+  "LackOfTimingList":"缺少定时列表",
+  "TimeFormatError":"时间格式错误",
+  "CurrencyExchangeIsNotSupported":"暂不支持{{from}}币种兑换{{to}}币种",
+  "ExchangeRateHasChanged":"兑率已变更",
+  "InvalidCurrency":"无效币种",
+  "UserRewardDataQueryError":"用户奖励数据查询错误",
+  "SignInRewardFailure":"签到奖励失败",
+  "VipSignInReward":"VIP签到奖励",
+  "GiveProps":"赠送道具",
+  "GivingPeopleIDInvalid":"赠送人ID无效",
+  "DoNotHaveTheGiftConditions":"你不具备赠送条件",
+  "OtherIDIsNotValid":"对方ID无效",
+  "DoNotMeetTheConditions":"对方未达到接收条件",
+  "InvalidApplicationID":"无效应用ID",
+  "GivePropsMessage":"玩家【{{from}}】赠送了道具【{{prop}}】给玩家【{{to}}】!"
+}

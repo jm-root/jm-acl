@@ -1,0 +1,8 @@
+{
+  "OrganizationNotExist":"组织不存在",
+  "ParentNodeNotExist":"父节点不存在",
+  "RootNodeCannotBeDeleted":"根节点不能删除",
+  "SystemDefaultRoleCannotBeDeleted":"系统默认配置角色不能删除",
+  "RoleNotExist":"角色不存在",
+  "ResourceNotExist":"资源不存在"
+}

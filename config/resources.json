@@ -1,0 +1,19 @@
+[
+  {"code":"/acl/orgs","orgs":["root"],"title":"操作组织","permissions":["*","get","post","delete"]},
+  {"code":"/acl/orgs/:id","orgs":["root"],"title":"操作指定组织","permissions":["*","get","post","delete"]},
+  {"code":"/acl/orgs/tree","orgs":["root"],"title":"操作组织树","permissions":["*","get"]},
+  {"code":"/acl/orgs/:id/users","orgs":["root"],"title":"操作组织下所有用户","permissions":["*","get"]},
+  {"code":"/acl/orgs/:id/roles","orgs":["root"],"title":"操作组织下所有角色","permissions":["*","get","post","delete"]},
+  {"code":"/acl/orgs/:id/resources","orgs":["root"],"title":"操作组织下所有资源","permissions":["*","get","post","delete"]},
+  {"code":"/acl/resources/:id","orgs":["root"],"title":"操作指定资源","permissions":["*","post"]},
+  {"code":"/acl/resources","orgs":["root"],"title":"操作资源","permissions":["*","get","post","delete"]},
+  {"code":"/acl/user/roles","orgs":["root"],"title":"获取用户角色","permissions":["*","get"],"perSignOnLimit":["get"]},
+  {"code":"/acl/user/permissions","orgs":["root"],"title":"获取用户权限","permissions":["*","get"],"perSignOnLimit":["get"]},
+  {"code":"/acl/roles","orgs":["root"],"title":"操作角色","permissions":["*","get","post"]},
+  {"code":"/acl/roles/:id","orgs":["root"],"title":"更新角色信息","permissions":["*","post"]},
+  {"code":"/acl/roles/:role","orgs":["root"],"title":"删除角色","permissions":["*","delete"]},
+  {"code":"/acl/roles/:role/users","orgs":["root"],"title":"获取指定角色用户列表","permissions":["*","get"]},
+  {"code":"/acl/roles/:id/roles","orgs":["root"],"title":"操作用户角色","permissions":["*","post","delete"]},
+  {"code":"/acl/roles/:role/resources","orgs":["root"],"title":"操作角色资源","permissions":["*","get","delete"]},
+  {"code":"/acl/roles/:role/permissions","orgs":["root"],"title":"操作角色权限","permissions":["*","post","delete"]}
+]

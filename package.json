@@ -1,0 +1,37 @@
+{
+  "name": "jm-acl",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./lib/index",
+  "scripts": {},
+  "repository": {},
+  "keywords": [],
+  "author": {
+    "name": "Jeff YU"
+  },
+  "license": "MIT",
+  "bugs": {},
+  "homepage": "",
+  "dependencies": {
+    "async": "*",
+    "acl": "*",
+    "fs-extra": "*",
+    "jm-common": "*",
+    "jm-ms": "*",
+    "jm-playsdk": "*",
+    "jm-sso": "*",
+    "lodash": "*",
+    "log4js": "*",
+    "moment": "*",
+    "mongoose": "*",
+    "redis": "*",
+    "superagent": "*"
+  },
+  "devDependencies": {
+    "minimist": "*",
+    "supertest": "*",
+    "chai": "*"
+  },
+  "readme": "",
+  "readmeFilename": "README.md"
+}

@@ -1,0 +1,8 @@
+{
+  "RefundAmountExceeds":"Request a refund amount exceeds the amount paid",
+  "NotSupportCurrentPlatform":"Do not support the current payment platform",
+  "CannotPayForOneself":"Cannot pay for oneself",
+  "NoInternalTransactionCurrency":"No internal transaction currency",
+  "ThirdPartyChannelsError":"Please fill in the effective third party channels",
+  "PaymentFailure": "Payment failure"
+}

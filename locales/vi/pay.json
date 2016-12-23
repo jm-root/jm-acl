@@ -1,0 +1,8 @@
+{
+  "RefundAmountExceeds":"số tiền yêu cầu trả vượt quá số tiền có thể thanh toán",
+  "NotSupportCurrentPlatform":"không thể thanh toán cho đơn vị thanh toán này",
+  "CannotPayForOneself":"không thể thanh toán cho bản thân",
+  "NoInternalTransactionCurrency":"loại xu không thể giao dịch nội bộ",
+  "ThirdPartyChannelsError":"xin cung cấp đường dẫn có hiệu lực của bên thứ ba",
+  "PaymentFailure": "Trả tiền cho thất bại."
+}

@@ -1,0 +1,8 @@
+{
+  "TheQueryBoxRecordsFailed": "The query box records failed",
+  "100000GoldWonDBj": "100000 gold won dbj",
+  "FailedToObtainConfigurationInformation": "Failed to obtain configuration information ",
+  "FailedToAddPrizes": "Failed to add prizes",
+  "FailureUpdatingRecord": "failure updating record",
+  "BaoxiangWinMessage": "Game player 【{{user}}】 in open the chest was 【{{number}}】 lottery"
+}
