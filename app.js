@@ -1,5 +1,7 @@
 var log4js = require('log4js');
 log4js.configure('./config/log4js.json');
+var mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
 var config = require('./config');
 var jm = require('jm-ms');
 var logger = jm.getLogger('main');
@@ -33,7 +35,11 @@ var ms = jm.ms;
 var app = ms();
 app.servers = {};
 app.config = config;
-var service = require('./lib')(config);
+var opts = {
+    db: require('jm-dao').DB.connect(config.db),
+    superRole: config.superRole || 'superadmin'
+};
+var service = require('./lib')(opts);
 app.use(config.prefix || '', service.router());
 service.app = app;
 for(var i in config.ms){
