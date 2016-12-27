@@ -35,26 +35,28 @@ var ms = jm.ms;
 var app = ms();
 app.servers = {};
 app.config = config;
-var opts = {
-    db: require('jm-dao').DB.connect(config.db),
-    superRole: config.superRole || 'superadmin'
-};
-var service = require('./lib')(opts);
-app.use(config.prefix || '', service.router());
-service.app = app;
-for(var i in config.ms){
-    var opts = config.ms[i];
-    opts.server = server;
-    opts.app = appWeb;
-    ms.server(app, opts, function (err, doc) {
-        logger.info('ms server type:%s started', opts.type);
-        app.servers[opts.type] = doc;
-        doc.on('connection', function(session){
-            service.emit('connection', session);
+var db = require('jm-dao').DB.connect(config.db);
+db.on('open', function(){
+    var opts = {
+        db: db,
+        superRole: config.superRole || 'superadmin'
+    };
+    var service = require('./lib')(opts);
+    app.use(config.prefix || '', service.router());
+    service.app = app;
+    for(var i in config.ms){
+        var opts = config.ms[i];
+        opts.server = server;
+        opts.app = appWeb;
+        ms.server(app, opts, function (err, doc) {
+            logger.info('ms server type:%s started', opts.type);
+            app.servers[opts.type] = doc;
+            doc.on('connection', function(session){
+                service.emit('connection', session);
+            });
         });
-    });
-}
-
+    }
+});
 process.on('uncaughtException', function (err) {
     console.error('Caught exception: ' + err.stack);
 });
