@@ -1,15 +1,12 @@
 {
   "appenders": [
     {
-      "type": "console",
-      "filename": "logs/server",
-      "pattern": "yyyyMMdd.log",
-      "alwaysIncludePattern": false,
-      "category": ["main", "console"]
+      "type": "console"
     }
   ],
   "replaceConsole": true,
-  "levels":{
-    "main": "trace"
+  "levels": {
+    "jm-ms-ws:server": "info",
+    "jm-ms-http:server": "info"
   }
 }
