@@ -1,14 +1,18 @@
 module.exports = [
     {
-        code: 'get',
-        title: '读取'
-    },
-    {
-        code: 'post',
-        title: '修改'
+        code: 'put',
+        title: '增'
     },
     {
         code: 'delete',
-        title: '删除'
+        title: '删'
+    },
+    {
+        code: 'post',
+        title: '改'
+    },
+    {
+        code: 'get',
+        title: '查'
     }
 ];
