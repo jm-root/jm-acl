@@ -10,6 +10,11 @@ module.exports = [
                 description: '权限'
             },
             {
+                code: 'config',
+                title: '配置',
+                description: '配置'
+            },
+            {
                 code: 'sso',
                 title: '用户',
                 description: '用户'
