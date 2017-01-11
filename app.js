@@ -38,8 +38,7 @@ app.config = config;
 var db = require('jm-dao').DB.connect(config.db);
 db.on('open', function(){
     var opts = {
-        db: db,
-        superRole: config.superRole || 'superadmin'
+        db: db
     };
     var service = require('./lib')(opts);
     app.use(config.prefix || '', service.router());
