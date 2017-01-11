@@ -1,6 +1,6 @@
 module.exports = [
     {
-        code: 'superadmin',
+        code: 'root',
         title: '超级管理员',
         description: '超级管理员'
     },
