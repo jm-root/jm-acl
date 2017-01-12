@@ -4,6 +4,7 @@ var config = {
         debug: true,
         port: 20110,
         db: 'mongodb://localhost:27017/acl',
+        mq: 'redis://localhost:6379',
         ms: [
             {type: 'ws'},
             {type: 'http'}
@@ -14,6 +15,7 @@ var config = {
         debug: false,
         port: 20110,
         db: 'mongodb://test:123@mongo:27017/acl',
+        mq: 'redis://redis:6379',
         ms: [
             {type: 'ws'},
             {type: 'http'}

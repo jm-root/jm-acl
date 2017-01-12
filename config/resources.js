@@ -3,18 +3,6 @@ module.exports = [
         code: 'global', title: '全局权限', permissions: ['put', 'delete', 'post', 'get']
     },
     {
-        code: 'nav', title: '后台菜单', permissions: ['get'],
-        children: [
-            {
-                code: 'nav_acl', title: '权限管理', permissions: ['get'],
-                children: [
-                    {code: 'nav_acl_org', title: '组织管理', permissions: ['get']},
-                    {code: 'nav_acl_role', title: '角色管理', permissions: ['get']}
-                ]
-            }
-        ]
-    },
-    {
         code: '/acl', title: '权限', permissions: ['get'],
         children: [
             {
@@ -53,10 +41,6 @@ module.exports = [
                 ]
             }
         ]
-    },
-    {
-        code: '/config', title: '配置', permissions: ['get'],
-        children: []
     }
 ];
 

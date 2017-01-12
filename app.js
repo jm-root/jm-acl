@@ -40,6 +40,7 @@ db.on('open', function(){
     var opts = {
         db: db
     };
+    if(config.mq) opts.mq = require('jm-mq')({url: config.mq});
     var service = require('./lib')(opts);
     app.use(config.prefix || '', service.router());
     service.app = app;
