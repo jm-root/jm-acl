@@ -25,7 +25,7 @@ var env = process.env.NODE_ENV||'development';
 config = config[env]||config['development'];
 config.env = env;
 
-['debug', 'port','prefix', 'db', 'mq'].forEach(function(key) {
+['debug', 'port','prefix', 'db', 'mq', 'superRole', 'guestRole'].forEach(function(key) {
     process.env[key] && (config[key]=process.env[key]);
 });
 

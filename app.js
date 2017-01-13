@@ -41,6 +41,10 @@ db.on('open', function(){
         db: db
     };
     if(config.mq) opts.mq = require('jm-mq')({url: config.mq});
+    ['debug', 'superRole', 'guestRole'].forEach(function(key) {
+        config[key] && (opts[key] = config[key]);
+    });
+
     var service = require('./lib')(opts);
     app.use(config.prefix || '', service.router());
     service.app = app;
