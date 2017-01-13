@@ -1,8 +1,0 @@
-{
-  "TheQueryBoxRecordsFailed": "查询宝箱记录失败",
-  "100000GoldWonDBj": "100000金币赢夺宝卷",
-  "FailedToObtainConfigurationInformation": "获取配置信息失败",
-  "FailedToAddPrizes": "添加奖品失败",
-  "FailureUpdatingRecord": "更新记录失败",
-  "BaoxiangWinMessage": "玩家【{{user}}】在开宝箱中获得{{number}}张夺宝卷!"
-}

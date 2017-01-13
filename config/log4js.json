@@ -8,6 +8,6 @@
   "levels": {
     "jm-ms-ws:server": "info",
     "jm-ms-http:server": "info",
-    "jm-acl": "debug"
+    "jm-acl": "info"
   }
 }

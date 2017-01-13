@@ -1,8 +1,0 @@
-{
-  "TheQueryBoxRecordsFailed": "Tra cứu nhật ký rương báu thất bại",
-  "100000GoldWonDBj": "100000 hoàng kim thắng phiếu đoạt bảo",
-  "FailedToObtainConfigurationInformation": "Truy xuất thông tin cấu hình thất bại",
-  "FailedToAddPrizes": "Thêm phần thưởng thất bại",
-  "FailureUpdatingRecord": "Làm mới đoạt bảo thất bại",
-  "BaoxiangWinMessage": "Người chơi {{user}} trong khi mở rương báu đã trúng được {{number}} tờ phiếu đoạt bảo!"
-}

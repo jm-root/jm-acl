@@ -1,8 +1,0 @@
-{
-  "RefundAmountExceeds":"请求退款金额超出支付金额",
-  "NotSupportCurrentPlatform":"不支持当前支付平台",
-  "CannotPayForOneself":"不能对自己支付",
-  "NoInternalTransactionCurrency":"币种不能内部交易",
-  "ThirdPartyChannelsError":"请填写有效的第三方渠道",
-  "PaymentFailure": "支付失败"
-}

@@ -1,8 +1,0 @@
-{
-  "OrganizationNotExist": "tổ chức không tồn tại",
-  "ParentNodeNotExist":"Nút cha không tồn tại",
-  "RootNodeCannotBeDeleted":"Bạn không thể xóa các nút gốc",
-  "SystemDefaultRoleCannotBeDeleted":"không thể xóa nhân vật mặc định của hệ thống",
-  "RoleNotExist":"nhân vật không tồn tại",
-  "ResourceNotExist":"tài nguyên không tồn tại"
-}

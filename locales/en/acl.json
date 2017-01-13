@@ -1,8 +1,0 @@
-{
-  "OrganizationNotExist": "The organization does not exist",
-  "ParentNodeNotExist":"Parent node does not exist",
-  "RootNodeCannotBeDeleted":"Root node cannot be deleted",
-  "SystemDefaultRoleCannotBeDeleted":"System default configuration role cannot be deleted",
-  "RoleNotExist":"Role Not Exist",
-  "ResourceNotExist":"Resource does not exist"
-}
