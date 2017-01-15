@@ -16,12 +16,14 @@ var server = http.createServer(appWeb).listen(config.port || 3000, function () {
 });
 appWeb.use(bodyParser.json());
 appWeb.use(bodyParser.urlencoded({extended: true}));
-appWeb.set('trust proxy', true);   //支持代理后面获取用户真实ip
+var trustProxy = false;
+config.trustProxy && (trustProxy=true);
+appWeb.set('trust proxy', trustProxy);   //支持代理后面获取用户真实ip
 
 //设置跨域访问
 appWeb.use(function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Content-Length, Authorization, Accept');
+    res.header('Access-Control-Allow-Headers', 'X-Forwarded-For, X-Requested-With, Content-Type, Content-Length, Authorization, Accept');
     res.header('Access-Control-Allow-Methods','PUT, POST, GET, DELETE, OPTIONS');
     res.header('Content-Type', 'application/json;charset=utf-8');
     if(req.method=='OPTIONS')
