@@ -3,34 +3,46 @@
   "version": "0.0.1",
   "description": "",
   "main": "./lib/index",
-  "scripts": {},
-  "repository": {},
-  "keywords": [],
-  "author": {
-    "name": "Jeff YU"
+  "scripts": {
+    "start": "node app",
+    "test": "node test"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jm-root/jm-acl.git"
+  },
+  "keywords": [
+    "javascript",
+    "jm-acl",
+    "acl"
+  ],
+  "author": "Jeff YU",
   "license": "MIT",
-  "bugs": {},
-  "homepage": "",
+  "bugs": {
+    "url": "https://github.com/jm-root/jm-acl/issues"
+  },
+  "homepage": "https://github.com/jm-root/jm-acl",
   "dependencies": {
     "async": "*",
     "acl": "*",
-    "fs-extra": "*",
-    "jm-common": "*",
-    "jm-ms": "*",
-    "jm-ms-daorouter": "*",
     "lodash": "*",
-    "log4js": "*",
-    "moment": "*",
-    "mongoose": "*",
-    "redis": "*",
-    "superagent": "*"
+    "bluebird": "*",
+    "jm-dao": "*",
+    "jm-mq": "*",
+    "jm-ms-core": "*",
+    "jm-ms-daorouter": "*"
   },
   "devDependencies": {
-    "minimist": "*",
-    "supertest": "*",
-    "chai": "*"
-  },
-  "readme": "",
-  "readmeFilename": "README.md"
+    "jm-ms": "*",
+    "jm-sdk-core": "*",
+    "jshint": "*",
+    "gulp": "*",
+    "gulp-clean": "*",
+    "gulp-concat": "*",
+    "gulp-jshint": "*",
+    "gulp-rename": "*",
+    "gulp-sequence": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*"
+  }
 }
