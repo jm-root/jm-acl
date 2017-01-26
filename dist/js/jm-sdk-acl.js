@@ -121,8 +121,33 @@ if ((typeof exports !== 'undefined' && typeof module !== 'undefined')) {
                 uri: url,
                 data: opts
             }, cb);
-        }
+        },
 
+    };
+
+    var acl = sdk.acl;
+    acl.role = {
+        list: function(opts, cb) {
+            cb || (cb = cb_default);
+            opts || (opts = {});
+            var url = '/roles';
+            acl.client.get({
+                uri: url,
+                data: opts
+            }, cb);
+        }
+    };
+
+    acl.user = {
+        list: function(opts, cb) {
+            cb || (cb = cb_default);
+            opts || (opts = {});
+            var url = '/users';
+            acl.client.get({
+                uri: url,
+                data: opts
+            }, cb);
+        }
     };
 
 })();
