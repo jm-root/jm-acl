@@ -122,6 +122,65 @@ if ((typeof exports !== 'undefined' && typeof module !== 'undefined')) {
                 data: opts
             }, cb);
         },
+        /**
+         * 重新加载
+         * @function acl#reload
+         * @param {Object} [opts={}] 参数
+         * @example
+         * opts参数:{
+         *  token: (可选)
+         *  name:(可选)
+         * }
+         * @param {callback} [cb=function(err,doc){}] 回调
+         * @example
+         * cb参数格式:
+         * doc参数:{
+         *  ret: 1
+         *  }
+         * 出错时, doc参数:{
+         *  err: 错误码,
+         *  msg: 错误信息
+         * }
+         */
+        reload:function (opts,cb) {
+            cb || (cb = cb_default);
+            opts || (opts = {});
+            var url = '/reload';
+            this.client.get({
+                uri: url,
+                data: opts
+            }, cb);
+        },
+        /**
+         * 获取角色资源
+         * @function acl#roleResources
+         * @param {Object} [opts={}] 参数
+         * @example
+         * opts参数:{
+         *  token: (可选)
+         *  roles:
+         *  permissions:(可选)
+         * }
+         * @param {callback} [cb=function(err,doc){}] 回调
+         * @example
+         * cb参数格式:
+         * doc参数:{
+         *  ret: 1
+         *  }
+         * 出错时, doc参数:{
+         *  err: 错误码,
+         *  msg: 错误信息
+         * }
+         */
+        roleResources:function (opts,cb) {
+            cb || (cb = cb_default);
+            opts || (opts = {});
+            var url = '/roleResources';
+            this.client.get({
+                uri: url,
+                data: opts
+            }, cb);
+        }
 
     };
 
@@ -143,6 +202,17 @@ if ((typeof exports !== 'undefined' && typeof module !== 'undefined')) {
             cb || (cb = cb_default);
             opts || (opts = {});
             var url = '/users';
+            acl.client.get({
+                uri: url,
+                data: opts
+            }, cb);
+        }
+    };
+    acl.resource = {
+        list: function(opts, cb) {
+            cb || (cb = cb_default);
+            opts || (opts = {});
+            var url = '/resources';
             acl.client.get({
                 uri: url,
                 data: opts
