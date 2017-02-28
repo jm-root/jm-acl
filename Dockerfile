@@ -1,6 +1,10 @@
-# npm install
-# docker build -t jm-acl:latest .
-FROM dashersw/node-pm2:alpine
-MAINTAINER Jeff YU, 2651339@qq.com
+# docker build -t jamma/acl:latest .
+FROM node:alpine
+MAINTAINER Jeff YU, jeff@jamma.cn
+
 ADD . /app
-ENV APP app.json
+WORKDIR /app
+RUN npm install && npm cache clean
+
+ENV NODE_ENV production
+CMD [ "npm", "start" ]
