@@ -43,7 +43,7 @@ db.on('open', function(){
         db: db
     };
     if(config.mq) opts.mq = require('jm-mq')({url: config.mq});
-    ['debug', 'superRole', 'guestRole'].forEach(function(key) {
+    ['debug', 'superRole', 'guestRole', 'disableAutoInit'].forEach(function(key) {
         config[key] && (opts[key] = config[key]);
     });
 
