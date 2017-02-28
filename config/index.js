@@ -3,8 +3,8 @@ var config = {
         prefix: "/acl",
         debug: true,
         port: 20110,
-        db: 'mongodb://localhost:27017/acl',
-        mq: 'redis://localhost:6379',
+        db: 'mongodb://localhost/acl',
+        mq: 'redis://localhost',
         ms: [
             {type: 'ws'},
             {type: 'http'}
@@ -14,6 +14,8 @@ var config = {
         prefix: "/acl",
         debug: false,
         port: 20110,
+        db: 'mongodb://mongo.db/acl',
+        mq: 'redis://redis.db',
         ms: [
             {type: 'ws'},
             {type: 'http'}
@@ -25,7 +27,7 @@ var env = process.env.NODE_ENV||'development';
 config = config[env]||config['development'];
 config.env = env;
 
-['debug', 'port', 'prefix', 'trustProxy', 'db', 'mq', 'superRole', 'guestRole'].forEach(function(key) {
+['debug', 'port', 'prefix', 'trustProxy', 'db', 'mq', 'superRole', 'guestRole', 'disableAutoInit'].forEach(function(key) {
     process.env[key] && (config[key]=process.env[key]);
 });
 
