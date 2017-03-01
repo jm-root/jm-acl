@@ -1,10 +1,10 @@
 {
   "name": "jm-acl",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "main": "./lib/index",
   "scripts": {
-    "start": "node app",
+    "start": "node cluster",
     "test": "node test"
   },
   "repository": {
@@ -29,11 +29,10 @@
     "bluebird": "*",
     "jm-dao": "*",
     "jm-mq": "*",
-    "jm-ms-core": "*",
+    "jm-ms": "*",
     "jm-ms-daorouter": "*"
   },
   "devDependencies": {
-    "jm-ms": "*",
     "jm-sdk-core": "*",
     "jshint": "*",
     "gulp": "*",
