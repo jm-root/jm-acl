@@ -6,4 +6,4 @@ WORKDIR /user/app
 COPY package.json .
 RUN npm install --production && npm cache clean
 COPY . .
-CMD [ "npm", "start" ]
+CMD npm run cluster

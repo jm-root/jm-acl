@@ -4,7 +4,8 @@
   "description": "",
   "main": "./lib/index",
   "scripts": {
-    "start": "node cluster",
+    "start": "node app",
+    "cluster": "node cluster",
     "test": "node test"
   },
   "repository": {
