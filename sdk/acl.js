@@ -280,6 +280,34 @@ if ((typeof exports !== 'undefined' && typeof module !== 'undefined')) {
 
     var acl = sdk.acl;
     acl.role = {
+        /**
+         * 填充角色
+         * @function acl#role.fill
+         * @param {Object} [opts={}] 参数
+         * @example
+         * opts参数:{
+         *  rows:[{code: '角色编码', title: '标题', description:'描述',parents:['父编码'], allows: [{resource:'资源编码', permissions: ['权限']}]}]
+         * }
+         * @param {callback} [cb=function(err,doc){}] 回调
+         * @example
+         * cb参数格式:
+         * {
+         *  ret:true|false
+         * }
+         * 出错时, doc参数:{
+         *  err: 错误码,
+         *  msg: 错误信息
+         * }
+         */
+        fill: function(opts, cb) {
+            cb || (cb = cb_default);
+            opts || (opts = {});
+            var url = '/roles/fill';
+            acl.client.post({
+                uri: url,
+                data: opts
+            }, cb);
+        },
         list: function(opts, cb) {
             cb || (cb = cb_default);
             opts || (opts = {});
@@ -335,6 +363,24 @@ if ((typeof exports !== 'undefined' && typeof module !== 'undefined')) {
             cb || (cb = cb_default);
             opts || (opts = {});
             var url = '/resources';
+            acl.client.get({
+                uri: url,
+                data: opts
+            }, cb);
+        },
+        all: function(opts, cb) {
+            cb || (cb = cb_default);
+            opts || (opts = {});
+            var url = '/resources/all';
+            acl.client.get({
+                uri: url,
+                data: opts
+            }, cb);
+        },
+        tree: function(opts, cb) {
+            cb || (cb = cb_default);
+            opts || (opts = {});
+            var url = '/resources/tree';
             acl.client.get({
                 uri: url,
                 data: opts
