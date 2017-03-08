@@ -239,7 +239,7 @@ if ((typeof exports !== 'undefined' && typeof module !== 'undefined')) {
         addUserRoles:function (opts,cb) {
             cb || (cb = cb_default);
             opts || (opts = {});
-            var url = '/addUserRoles';
+            var url = '/userRoles';
             this.client.put({
                 uri: url,
                 data: opts
@@ -269,7 +269,7 @@ if ((typeof exports !== 'undefined' && typeof module !== 'undefined')) {
         removeUserRoles:function (opts,cb) {
             cb || (cb = cb_default);
             opts || (opts = {});
-            var url = '/removeUserRoles';
+            var url = '/userRoles';
             this.client.delete({
                 uri: url,
                 data: opts
@@ -282,7 +282,7 @@ if ((typeof exports !== 'undefined' && typeof module !== 'undefined')) {
     acl.role = {
         /**
          * 填充角色
-         * @function acl#role.fill
+         * @function acl#role.init
          * @param {Object} [opts={}] 参数
          * @example
          * opts参数:{
@@ -299,10 +299,10 @@ if ((typeof exports !== 'undefined' && typeof module !== 'undefined')) {
          *  msg: 错误信息
          * }
          */
-        fill: function(opts, cb) {
+        init: function(opts, cb) {
             cb || (cb = cb_default);
             opts || (opts = {});
-            var url = '/roles/fill';
+            var url = '/roles/init';
             acl.client.post({
                 uri: url,
                 data: opts
@@ -333,7 +333,7 @@ if ((typeof exports !== 'undefined' && typeof module !== 'undefined')) {
     acl.resource = {
         /**
          * 填充资源
-         * @function acl#resource.fill
+         * @function acl#resource.init
          * @param {Object} [opts={}] 参数
          * @example
          * opts参数:{
@@ -350,10 +350,10 @@ if ((typeof exports !== 'undefined' && typeof module !== 'undefined')) {
          *  msg: 错误信息
          * }
          */
-        fill: function(opts, cb) {
+        init: function(opts, cb) {
             cb || (cb = cb_default);
             opts || (opts = {});
-            var url = '/resources/fill';
+            var url = '/resources/init';
             acl.client.post({
                 uri: url,
                 data: opts
