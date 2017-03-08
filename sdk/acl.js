@@ -123,6 +123,35 @@ if ((typeof exports !== 'undefined' && typeof module !== 'undefined')) {
             }, cb);
         },
         /**
+         * 获取用户资源及权限
+         * @function acl#userResources
+         * @param {Object} [opts={}] 参数
+         * @example
+         * opts参数:{
+         *  user: 用户id(必填)
+         *  resource: 资源(可选)
+         * }
+         * @param {callback} [cb=function(err,doc){}] 回调
+         * @example
+         * cb参数格式:
+         * {
+         *  '资源':['权限']
+         * }
+         * 出错时, doc参数:{
+         *  err: 错误码,
+         *  msg: 错误信息
+         * }
+         */
+        userResources:function (opts,cb) {
+            cb || (cb = cb_default);
+            opts || (opts = {});
+            var url = '/userResources';
+            this.client.get({
+                uri: url,
+                data: opts
+            }, cb);
+        },
+        /**
          * 重新加载
          * @function acl#reload
          * @param {Object} [opts={}] 参数
@@ -164,9 +193,14 @@ if ((typeof exports !== 'undefined' && typeof module !== 'undefined')) {
          * @param {callback} [cb=function(err,doc){}] 回调
          * @example
          * cb参数格式:
-         * doc参数:{
-         *  ret: 1
-         *  }
+         * 方式一:
+         * {
+         *  '资源':['权限']
+         * }
+         * 方式二:
+         * {
+         *  rows:['具有指定权限的资源']
+         * }
          * 出错时, doc参数:{
          *  err: 错误码,
          *  msg: 错误信息
@@ -177,6 +211,66 @@ if ((typeof exports !== 'undefined' && typeof module !== 'undefined')) {
             opts || (opts = {});
             var url = '/roleResources';
             this.client.get({
+                uri: url,
+                data: opts
+            }, cb);
+        },
+
+        /**
+         * 添加用户角色
+         * @function acl#addUserRoles
+         * @param {Object} [opts={}] 参数
+         * @example
+         * opts参数:{
+         *  user: 用户id(必填)
+         *  role: 角色(必填)
+         * }
+         * @param {callback} [cb=function(err,doc){}] 回调
+         * @example
+         * cb参数格式:
+         * doc参数:{
+         *  ret: 1
+         *  }
+         * 出错时, doc参数:{
+         *  err: 错误码,
+         *  msg: 错误信息
+         * }
+         */
+        addUserRoles:function (opts,cb) {
+            cb || (cb = cb_default);
+            opts || (opts = {});
+            var url = '/addUserRoles';
+            this.client.put({
+                uri: url,
+                data: opts
+            }, cb);
+        },
+
+        /**
+         * 移除用户角色
+         * @function acl#removeUserRoles
+         * @param {Object} [opts={}] 参数
+         * @example
+         * opts参数:{
+         *  user: 用户id(必填)
+         *  role: 角色(必填)
+         * }
+         * @param {callback} [cb=function(err,doc){}] 回调
+         * @example
+         * cb参数格式:
+         * doc参数:{
+         *  ret: 1
+         *  }
+         * 出错时, doc参数:{
+         *  err: 错误码,
+         *  msg: 错误信息
+         * }
+         */
+        removeUserRoles:function (opts,cb) {
+            cb || (cb = cb_default);
+            opts || (opts = {});
+            var url = '/removeUserRoles';
+            this.client.delete({
                 uri: url,
                 data: opts
             }, cb);
@@ -209,6 +303,34 @@ if ((typeof exports !== 'undefined' && typeof module !== 'undefined')) {
         }
     };
     acl.resource = {
+        /**
+         * 填充资源
+         * @function acl#resource.fill
+         * @param {Object} [opts={}] 参数
+         * @example
+         * opts参数:{
+         *  rows:[{code: '资源编码', title: '标题', permissions: ['权限'],children: []}]
+         * }
+         * @param {callback} [cb=function(err,doc){}] 回调
+         * @example
+         * cb参数格式:
+         * {
+         *  ret:true|false
+         * }
+         * 出错时, doc参数:{
+         *  err: 错误码,
+         *  msg: 错误信息
+         * }
+         */
+        fill: function(opts, cb) {
+            cb || (cb = cb_default);
+            opts || (opts = {});
+            var url = '/resources/fill';
+            acl.client.post({
+                uri: url,
+                data: opts
+            }, cb);
+        },
         list: function(opts, cb) {
             cb || (cb = cb_default);
             opts || (opts = {});
