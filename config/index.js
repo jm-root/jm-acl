@@ -4,7 +4,7 @@ var config = {
         port: 20110,
         db: 'mongodb://localhost/acl',
         mq: 'redis://localhost',
-        tableNamePrefix: 'acl_',
+        //tableNamePrefix: 'acl_',
         modules: {
             acl: {
                 module: process.cwd() + '/lib'
