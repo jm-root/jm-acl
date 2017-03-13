@@ -1,3 +1,4 @@
+require('log4js').configure(__dirname + '/log4js.json');
 var config = {
     development: {
         debug: true,
