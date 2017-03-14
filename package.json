@@ -1,11 +1,11 @@
 {
   "name": "jm-acl",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "",
   "main": "./lib/index",
   "scripts": {
-    "start": "node app",
-    "cluster": "node cluster",
+    "start": "jm-server",
+    "cluster": "jm-server --cluster",
     "test": "node test"
   },
   "repository": {
