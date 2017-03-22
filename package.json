@@ -1,6 +1,6 @@
 {
   "name": "jm-acl",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "",
   "main": "./lib/index",
   "scripts": {
@@ -30,7 +30,7 @@
     "bluebird": "*",
     "jm-dao": "*",
     "jm-mq": "*",
-    "jm-server": "*",
+    "jm-server": "~0.1.0",
     "jm-ms-daorouter": "*"
   },
   "devDependencies": {
