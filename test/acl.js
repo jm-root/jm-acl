@@ -16,6 +16,7 @@ if((typeof exports !== 'undefined' && typeof module !== 'undefined')){
     };
 
     var opts = {
+        defaultAllow: true,
         db: require('jm-dao').DB.connect('mongodb://localhost/acl')
     };
     var service = require('../lib')(opts);
