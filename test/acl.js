@@ -33,7 +33,7 @@ if((typeof exports !== 'undefined' && typeof module !== 'undefined')){
         log(null, 'isAllowed /acl get,post');
         //service.isAllowed(null, '/acl', ['get', 'post'], log);
         //service.isAllowed(null, '/acl/resources', 'put', log);
-        service.isAllowed(null, '/acl/resources1', 'post', log);
+        service.isAllowed(null, '/acl/resources/123', 'post', log);
         // service.isAllowed(null, '/acl/resources/abc', 'delete', log);
     });
 
