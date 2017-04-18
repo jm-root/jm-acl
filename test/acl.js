@@ -12,18 +12,34 @@ if((typeof exports !== 'undefined' && typeof module !== 'undefined')){
         if (err) {
             logger.error(err.stack);
         }
-        if(doc){
-            logger.debug('%s', utils.formatJSON(doc));
-        }
+        logger.debug('%s', utils.formatJSON(doc));
     };
 
     var opts = {
-        db: require('jm-dao').DB.connect()
+        defaultAllow: true,
+        db: require('jm-dao').DB.connect('mongodb://localhost/acl')
     };
+    var service = require('../lib')(opts);
 
-    opts.db.on('open', function(){
-        var service = require('../lib')(opts);
-        service.acl.allow('guest', '/acl', 'get', log);
-        service.acl.addUserRoles('guest', 'guest', log);
+    // opts.db.on('open', function(){
+    //     service.acl.allow('guest', '/acl', 'get');
+    //     service.acl.allow('guest', '/acl/resources', 'put');
+    //     service.acl.allow('guest', '/acl/resources/:id', 'delete');
+    //     service.acl.addUserRoles('guest', 'guest');
+    // });
+
+    service.on('loaded', (name) => {
+        if (name !== 'resource') return;
+        log(null, 'isAllowed /acl get,post');
+        //service.isAllowed(null, '/acl', ['get', 'post'], log);
+        //service.isAllowed(null, '/acl/resources', 'put', log);
+        service.isAllowed(null, '/acl/resources/123', 'post', log);
+        // service.isAllowed(null, '/acl/resources/abc', 'delete', log);
     });
+
 })();
+
+process.on('uncaughtException', function (err) {
+    console.error('Caught exception: ' + err.stack);
+});
+
