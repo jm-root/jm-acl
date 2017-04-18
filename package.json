@@ -1,11 +1,11 @@
 {
   "name": "jm-acl",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "",
   "main": "./lib/index",
   "scripts": {
-    "start": "jm-server",
-    "cluster": "jm-server --cluster",
+    "start": "node node_modules/jm-server/bin/jm-server",
+    "cluster": "node node_modules/jm-server/bin/jm-server --cluster",
     "test": "node test"
   },
   "repository": {
@@ -24,14 +24,14 @@
   },
   "homepage": "https://github.com/jm-root/jm-acl",
   "dependencies": {
-    "async": "*",
-    "acl": "*",
-    "lodash": "*",
-    "bluebird": "*",
-    "jm-dao": "*",
-    "jm-mq": "*",
-    "jm-server": "~0.1.0",
-    "jm-ms-daorouter": "*"
+    "acl": "^0.4.10",
+    "async": "^2.3.0",
+    "bluebird": "^3.5.0",
+    "jm-dao": "^0.0.6",
+    "jm-mq": "^0.2.2",
+    "jm-ms-daorouter": "^0.0.2",
+    "jm-server": "^0.1.5",
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
     "jm-sdk-core": "*",

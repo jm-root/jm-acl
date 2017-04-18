@@ -2,6 +2,7 @@ require('log4js').configure(__dirname + '/log4js.json');
 var config = {
     development: {
         debug: true,
+        defaultAllow: true,
         port: 20110,
         db: 'mongodb://localhost/acl',
         mq: 'redis://localhost',
