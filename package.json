@@ -1,6 +1,6 @@
 {
   "name": "jm-acl",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "",
   "main": "./lib/index",
   "scripts": {
@@ -30,7 +30,7 @@
     "jm-dao": "^0.0.6",
     "jm-mq": "^0.2.2",
     "jm-ms-daorouter": "^0.0.2",
-    "jm-server": "^0.1.5",
+    "jm-server": "^0.1.6",
     "lodash": "^4.17.4"
   },
   "devDependencies": {
