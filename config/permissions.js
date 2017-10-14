@@ -1,6 +1,6 @@
 module.exports = [
     {
-        code: 'put',
+        code: 'post',
         title: '增'
     },
     {
@@ -8,7 +8,7 @@ module.exports = [
         title: '删'
     },
     {
-        code: 'post',
+        code: 'put',
         title: '改'
     },
     {

@@ -29,9 +29,10 @@
     "bluebird": "^3.5.0",
     "jm-dao": "^0.0.6",
     "jm-mq": "^0.2.2",
-    "jm-ms-daorouter": "^0.0.2",
+    "jm-ms-daorouter": "^0.0.3",
     "jm-server": "^0.1.6",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "log4js": "^1.1.1"
   },
   "devDependencies": {
     "jm-sdk-core": "*",
