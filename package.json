@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/jm-root/jm-acl",
   "dependencies": {
-    "acl": "^0.4.10",
+    "acl": "0.4.10",
     "async": "^2.3.0",
     "bluebird": "^3.5.0",
     "mongoose": "4.10.8",
