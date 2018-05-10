@@ -1,1 +1,1 @@
-require('jm-server/bin/app');
+require('jm-server/bin/app')

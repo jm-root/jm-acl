@@ -1,1 +1,1 @@
-require('jm-server/bin/cluster');
+require('jm-server/bin/cluster')
