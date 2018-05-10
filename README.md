@@ -18,7 +18,7 @@ db [] 必填, mongo数据库uri
 
 mq [] Redis数据库uri, 如果有，则更新时通过消息服务器通知重新加载
 
-superRole ['superadmin'] 超级角色
+superRole ['root'] 超级角色
 
 guestRole ['guest'] 游客角色
 

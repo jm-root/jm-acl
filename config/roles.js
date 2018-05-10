@@ -10,17 +10,19 @@ module.exports = [
     description: '访客',
     allows: [
       {resource: '/acl', permissions: ['get']},
+      {resource: '/acl/isAllowed', permissions: ['get']},
       {resource: '/passport', permissions: ['get', 'post']},
       {resource: '/sso', permissions: ['get']},
-      {resource: '/users', permissions: ['get']},
-      {resource: '/mlm', permissions: ['get']},
+      {resource: '/user', permissions: ['get']},
+      {resource: '/oms', permissions: ['get']},
       {resource: '/bank', permissions: ['get']},
       {resource: '/shop', permissions: ['get']},
       {resource: '/tb', permissions: ['get']},
-      {resource: '/rmb', permissions: ['get']},
+      {resource: '/cny', permissions: ['get']},
+      {resource: '/agent', permissions: ['get']},
       {resource: '/wechat', permissions: ['get']},
       {resource: '/pay', permissions: ['get']},
-      {resource: '/pay/prepay', permissions: ['post']},
+      {resource: '/pay/prepay', permissions: ['post']}
     ]
   },
   {
@@ -29,7 +31,7 @@ module.exports = [
     description: '已登陆用户',
     parents: ['guest'],
     allows: [
-      {resource: '/users/:id', permissions: ['post', 'delete']},
+      {resource: '/user/users/:id', permissions: ['put', 'post', 'delete']}
     ]
   },
   {
@@ -38,4 +40,4 @@ module.exports = [
     description: '系统管理员',
     parents: ['user']
   }
-];
+]
