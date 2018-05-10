@@ -1,11 +1,10 @@
-var jm = require('jm-core');
+var jm = require('jm-core')
 
-var ERRCODE_ACL = 2000;
+var ERRCODE_ACL = 2000
 jm.ERR.acl = {
 
-};
+}
 
 module.exports = {
-    ERR: jm.ERR
-};
-
+  ERR: jm.ERR
+}
