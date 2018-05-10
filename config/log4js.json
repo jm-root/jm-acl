@@ -1,11 +1,29 @@
 {
   "appenders": [
     {
+      "type": "dateFile",
+      "filename": "logs/console",
+      "pattern": "-yyyyMMdd.log",
+      "alwaysIncludePattern": true,
+      "category": [
+        "console"
+      ]
+    },
+    {
+      "type": "dateFile",
+      "filename": "logs/acl",
+      "pattern": "-yyyyMMdd.log",
+      "alwaysIncludePattern": true,
+      "category": [
+        "acl"
+      ]
+    },    
+    {
       "type": "console"
     }
   ],
   "replaceConsole": true,
   "levels": {
-    "jm-acl": "info"
+    "acl": "info"
   }
 }

@@ -3,7 +3,7 @@ var config = {
     development: {
         debug: true,
         defaultAllow: true,
-        port: 20110,
+        port: 3000,
         db: 'mongodb://localhost/acl',
         mq: 'redis://localhost',
         //tableNamePrefix: 'acl_',
@@ -15,7 +15,7 @@ var config = {
     },
     production: {
         debug: false,
-        port: 20110,
+        port: 80,
         db: 'mongodb://mongo.db/acl',
         mq: 'redis://redis.db',
         modules: {
