@@ -1,12 +1,11 @@
 {
   "name": "jm-acl",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "",
   "main": "./lib/index",
   "scripts": {
-    "start": "node node_modules/jm-server/bin/jm-server",
-    "cluster": "node node_modules/jm-server/bin/jm-server --cluster",
-    "test": "node test"
+    "start": "jm-server",
+    "cluster": "jm-server --cluster"
   },
   "repository": {
     "type": "git",
@@ -27,6 +26,7 @@
     "acl": "^0.4.10",
     "async": "^2.3.0",
     "bluebird": "^3.5.0",
+    "mongoose": "4.10.8",
     "jm-dao": "^0.0.6",
     "jm-mq": "^0.2.2",
     "jm-ms-daorouter": "^0.0.3",
@@ -35,15 +35,10 @@
     "log4js": "^1.1.1"
   },
   "devDependencies": {
-    "jm-sdk-core": "*",
-    "jshint": "*",
-    "gulp": "*",
-    "gulp-clean": "*",
-    "gulp-concat": "*",
-    "gulp-jshint": "*",
-    "gulp-rename": "*",
-    "gulp-sequence": "*",
-    "gulp-uglify": "*",
-    "gulp-util": "*"
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
   }
 }
