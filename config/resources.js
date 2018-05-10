@@ -600,6 +600,14 @@ module.exports = [
     'sort': 0,
     'children': [
       {
+        'code': '/oms/nav',
+        'title': '菜单',
+        'permissions': [
+          'get'
+        ],
+        'sort': 0
+      },
+      {
         'code': 'nav_acl_manage',
         'title': '权限管理',
         'permissions': [

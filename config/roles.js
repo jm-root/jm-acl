@@ -31,7 +31,8 @@ module.exports = [
     description: '已登陆用户',
     parents: ['guest'],
     allows: [
-      {resource: '/user/users/:id', permissions: ['put', 'post', 'delete']}
+      {resource: '/user/users/:id', permissions: ['put', 'post', 'delete']},
+      {resource: '/oms/nav', permissions: ['get']}
     ]
   },
   {
