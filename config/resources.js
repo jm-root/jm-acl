@@ -30,6 +30,14 @@ module.exports = [
     'sort': 0,
     'children': [
       {
+        'code': '/acl/isAllowed',
+        'title': '鉴权',
+        'permissions': [
+          'get'
+        ],
+        'sort': 0
+      },
+      {
         'code': '/acl/resources',
         'title': '资源',
         'permissions': [
@@ -185,8 +193,7 @@ module.exports = [
         'code': '/passport/register',
         'title': '注册',
         'permissions': [
-          'post',
-          'put'
+          'post'
         ],
         'sort': 0
       },
