@@ -1,0 +1,43 @@
+openapi: 3.0.0
+# Added by API Auto Mocking Plugin
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/jm-root/jm-acl/1.0.0
+info:
+  version: "1.0.0"
+  title: jm-acl-api
+  description: ACL API
+paths:
+  /acl/isAllowed:
+    get:
+      description: 检查是否有权限访问
+      parameters:
+        - name: user
+          in: query
+          schema:
+            type: string
+        - name: resource
+          in: query
+          schema:
+            type: string
+        - name: permissions
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 返回结果
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetInfo'
+components:
+  schemas:
+    RetInfo:
+      type: object
+      properties:
+        ret:
+          type: integer
+          format: int32
+          example: 0
+          description: 0 不允许 1 允许
